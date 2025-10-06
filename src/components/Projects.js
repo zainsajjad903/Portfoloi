@@ -55,13 +55,11 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section className="py-16 bg-gray-50" data-aos="fade-up">
+    <section className="py-16" data-aos="fade-up">
       <div className="max-w-screen-xl mx-auto px-4">
         {/* Heading */}
-        <h2 className="text-4xl font-bold text-center text-gray-800">
-          My Works
-        </h2>
-        <p className="text-center text-gray-600 mt-4 max-w-2xl mx-auto">
+        <h2 className="text-4xl font-bold text-center ">My Works</h2>
+        <p className="text-center mt-4 max-w-2xl mx-auto">
           A showcase of some of my projects demonstrating my skills in MERN
           stack and web development.
         </p>

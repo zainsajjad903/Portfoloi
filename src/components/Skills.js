@@ -41,9 +41,9 @@ const About = () => {
 
   return (
     <section className="py-14" data-aos="fade-up">
-      <div className="max-w-screen-xl mx-auto px-4 text-center text-gray-600 md:px-8">
+      <div className="max-w-screen-xl mx-auto px-4 text-center md:px-8">
         <div className="max-w-2xl mx-auto">
-          <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
+          <h3 className=" text-3xl font-semibold sm:text-4xl">
             What I Do Best
           </h3>
           <p className="mt-3">
@@ -59,9 +59,7 @@ const About = () => {
                 <div className="w-14 h-14 mx-auto bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center gap-1">
                   {item.icon} {item.icon2}
                 </div>
-                <h4 className="text-lg text-gray-800 font-semibold">
-                  {item.title}
-                </h4>
+                <h4 className="text-lg font-semibold">{item.title}</h4>
                 <p>{item.desc}</p>
               </li>
             ))}

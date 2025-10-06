@@ -2,7 +2,7 @@ const HeroSection = () => {
   return (
     <>
       <div
-        className="max-w-screen-xl mx-auto px-4 py-20 text-gray-600 md:flex md:items-center md:gap-12"
+        className="max-w-screen-xl mx-auto px-4 py-20  md:flex md:items-center md:gap-12"
         data-aos="fade-up"
       >
         {/* Image - Mobile top */}
@@ -32,7 +32,7 @@ const HeroSection = () => {
 
         {/* RIGHT: Text */}
         <div className="flex-1 text-center md:text-left">
-          <h1 className="text-2xl md:text-4xl font-bold text-gray-800 whitespace-nowrap">
+          <h1 className="text-2xl md:text-4xl font-bold  whitespace-nowrap">
             Front end Developer
           </h1>
           <p className="mt-4 max-w-lg mx-auto md:mx-0">

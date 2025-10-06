@@ -22,7 +22,7 @@ const ContactItem = ({ icon, title, content }) => (
       <img src={icon} alt="" className="w-10 h-10" />
       <h3>{title}</h3>
     </div>
-    <p className="text-gray-700 mt-2">{content}</p>
+    <p className=" mt-2">{content}</p>
   </div>
 );
 
@@ -99,9 +99,9 @@ const ContactUsForm = () => {
 
   return (
     <div className="container mx-auto flex justify-center items-center p-6 md:p-12">
-      <div className="bg-[#F4F7FA] px-6 md:px-12 py-10 max-w-[1250px] w-full rounded-2xl">
+      <div className=" px-6 md:px-12 py-10 max-w-[1250px] w-full rounded-2xl">
         {/* Heading */}
-        <section className="text-center text-gray-900" data-aos="fade-up">
+        <section className="text-center" data-aos="fade-up">
           <h1 className="text-4xl md:text-6xl font-bold">Contact us</h1>
           <p className="mt-6 md:mt-10 text-lg md:text-xl max-w-[650px] mx-auto">
             “Have a project idea or want to collaborate? Feel free to reach
@@ -122,7 +122,7 @@ const ContactUsForm = () => {
         </section>
 
         {/* Form */}
-        <section className="flex flex-col p-6 md:p-10 bg-white rounded-xl shadow-xl">
+        <section className="flex flex-col p-6 md:p-10 rounded-xl shadow-xl">
           <form
             ref={formRef}
             onSubmit={handleSubmit}

@@ -26,29 +26,30 @@ function App() {
 
   return (
     <>
-      {/* <Preloader /> */}
-      <Navbar />
+      <div className="bg-white text-black dark:bg-gray-900 dark:text-white min-h-screen transition-colors duration-500">
+        <Navbar />
 
-      <section id="hero-section">
-        <HeroSection />
-      </section>
-      <section id="aboutme-section" className="mt-22">
-        <Aboutme />
-      </section>
-      <section id="skills-section" className="mt-25">
-        <Skills />
-      </section>
-      <section id="projects-section" className="mt-25">
-        <Projects />
-      </section>
-      <section id="progress-section" className="mt-25 mb-25">
-        <Progress />
-      </section>
-      <Testimonials className="mt-25" />
-      <section id="contact-section" className="mt-25 mb-25">
-        <ContactSection />
-      </section>
-      <Footer />
+        <section id="hero-section">
+          <HeroSection />
+        </section>
+        <section id="aboutme-section" className="mt-22">
+          <Aboutme />
+        </section>
+        <section id="skills-section" className="mt-25">
+          <Skills />
+        </section>
+        <section id="projects-section" className="mt-25">
+          <Projects />
+        </section>
+        <section id="progress-section" className="mt-25 mb-25">
+          <Progress />
+        </section>
+        <Testimonials className="mt-25" />
+        <section id="contact-section" className="mt-25 mb-25">
+          <ContactSection />
+        </section>
+        <Footer />
+      </div>
     </>
   );
 }

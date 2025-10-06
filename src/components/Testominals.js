@@ -15,7 +15,7 @@ const Testimonials = () => {
 
   return (
     <>
-      <section className="py-14 bg-gray-50" data-aos="fade-up">
+      <section className="py-14" data-aos="fade-up">
         <div className="max-w-screen-xl mx-auto px-4 md:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-3xl font-bold mb-8">Testimonials</h1>
@@ -28,7 +28,7 @@ const Testimonials = () => {
                   <li key={idx}>
                     <figure>
                       <blockquote>
-                        <p className="text-gray-600 text-1xl font-semibold sm:text-2xl">
+                        <p className=" text-1xl font-semibold sm:text-2xl">
                           “{item.quote}“
                         </p>
                       </blockquote>
@@ -39,10 +39,10 @@ const Testimonials = () => {
                           alt={item.name}
                         />
                         <div className="mt-3">
-                          <span className="block text-gray-800 font-semibold">
+                          <span className="block  font-semibold">
                             {item.name}
                           </span>
-                          <span className="block text-gray-600 text-sm mt-0.5">
+                          <span className="block  text-sm mt-0.5">
                             {item.title}
                           </span>
                         </div>

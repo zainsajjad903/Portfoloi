@@ -3,7 +3,7 @@ import { FaFacebookF, FaLinkedinIn, FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-400 py-6">
+    <footer className="bg-gray-900 py-6">
       <div className="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
         {/* Left Side - Text */}
         <p className="text-sm text-center md:text-left">
@@ -16,7 +16,7 @@ const Footer = () => {
             href="https://www.facebook.com/muhammad.zain.769197"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-800 hover:bg-indigo-600 text-white"
+            className="w-9 h-9 flex items-center justify-center rounded-full  hover:bg-indigo-600 text-white"
           >
             <FaFacebookF />
           </a>
@@ -25,7 +25,7 @@ const Footer = () => {
             href="https://www.linkedin.com/in/muhammad-zain-97a7a1315/"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-800 hover:bg-indigo-600 text-white"
+            className="w-9 h-9 flex items-center justify-center rounded-full  hover:bg-indigo-600 text-white"
           >
             <FaLinkedinIn />
           </a>
@@ -33,7 +33,7 @@ const Footer = () => {
             href="https://github.com/zainsajjad903"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-800 hover:bg-indigo-600 text-white"
+            className="w-9 h-9 flex items-center justify-center rounded-full  hover:bg-indigo-600 text-white"
           >
             <FaGithub />
           </a>

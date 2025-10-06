@@ -7,9 +7,9 @@ const ProgressSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-white" data-aos="fade-up">
+    <section className="py-16" data-aos="fade-up">
       <div className="max-w-screen-xl mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold text-gray-800 mb-12">Progress</h2>
+        <h2 className="text-3xl font-bold  mb-12">Progress</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 place-items-center">
           {skills.map((skill, idx) => (
             <div key={idx} className="flex flex-col items-center">
@@ -40,13 +40,11 @@ const ProgressSection = () => {
                     cy="64"
                   />
                 </svg>
-                <span className="absolute inset-0 flex items-center justify-center text-xl font-bold text-gray-700">
+                <span className="absolute inset-0 flex items-center justify-center text-xl font-bold">
                   {skill.percent}%
                 </span>
               </div>
-              <p className="mt-4 text-lg font-medium text-gray-700">
-                {skill.title}
-              </p>
+              <p className="mt-4 text-lg font-medium">{skill.title}</p>
             </div>
           ))}
         </div>
