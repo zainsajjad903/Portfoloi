@@ -26,7 +26,7 @@ function App() {
 
   return (
     <>
-      <div className="bg-white text-black dark:bg-gray-900 dark:text-white min-h-screen transition-colors duration-500">
+      <div className="min-h-screen bg-gradient-to-b from-white via-indigo-50/70 to-white dark:from-gray-900 dark:via-gray-800/80 dark:to-gray-900">
         <Navbar />
 
         <section id="hero-section">

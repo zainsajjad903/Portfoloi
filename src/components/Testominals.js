@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Testimonials = () => {
   const testimonials = [
@@ -7,73 +8,148 @@ const Testimonials = () => {
       name: "Ali Amad Khan",
       title: "Founder of Subtle Marketing",
       quote:
-        "“Zain built a complete Expense Tracker app for our company Subtle Marketing. The application made our expense management process smooth and efficient. He is highly skilled in MERN Stack and delivers on time",
+        "Zain built a complete Expense Tracker app for our company Subtle Marketing. The application made our expense management process smooth and efficient. He is highly skilled in MERN Stack and delivers on time.",
+    },
+    {
+      avatar: "https://api.uifaces.co/our-content/donated/6f6pUksG.jpg",
+      name: "Sarah Ahmed",
+      title: "Project Manager at Innovita",
+      quote:
+        "Zain has an excellent grasp of front-end development. His designs are elegant and his work ethic is top-notch. He understands business needs and converts them into clean interfaces.",
+    },
+    {
+      avatar: "https://api.uifaces.co/our-content/donated/n4F6_wJv.jpg",
+      name: "Hassan Raza",
+      title: "Freelance Client",
+      quote:
+        "Working with Zain was seamless. He quickly understood my requirements and delivered a responsive website that exceeded expectations. Definitely recommend him!",
     },
   ];
 
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
+  const handleNext = () => {
+    setCurrentTestimonial((prev) =>
+      prev === testimonials.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  const handlePrev = () => {
+    setCurrentTestimonial((prev) =>
+      prev === 0 ? testimonials.length - 1 : prev - 1
+    );
+  };
+
   return (
-    <>
-      <section className="py-14" data-aos="fade-up">
-        <div className="max-w-screen-xl mx-auto px-4 md:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-3xl font-bold mb-8">Testimonials</h1>
-            {/* <h3 className="text-indigo-600 font-semibold pb-6">
-              What people are saying
-            </h3> */}
-            <ul>
-              {testimonials.map((item, idx) =>
-                currentTestimonial === idx ? (
-                  <li key={idx}>
-                    <figure>
-                      <blockquote>
-                        <p className=" text-1xl font-semibold sm:text-2xl">
-                          “{item.quote}“
-                        </p>
-                      </blockquote>
-                      <div className="mt-6">
-                        <img
-                          src={item.avatar}
-                          className="w-16 h-16 mx-auto rounded-full"
-                          alt={item.name}
-                        />
-                        <div className="mt-3">
-                          <span className="block  font-semibold">
-                            {item.name}
-                          </span>
-                          <span className="block  text-sm mt-0.5">
-                            {item.title}
-                          </span>
-                        </div>
-                      </div>
-                    </figure>
-                  </li>
-                ) : (
-                  ""
-                )
-              )}
-            </ul>
+    <motion.section
+      id="testimonials-section"
+      className="py-24 bg-gradient-to-b from-white to-indigo-50 dark:from-gray-900 dark:to-gray-800 text-center"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+    >
+      <div className="max-w-screen-xl mx-auto px-4 md:px-8">
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-10">
+          Testimonials
+        </h2>
+
+        <div className="relative max-w-3xl mx-auto">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentTestimonial}
+              initial={{ opacity: 0, y: 30, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -30, scale: 0.95 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md p-10 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700"
+            >
+              <p className="text-lg italic text-gray-700 dark:text-gray-300 leading-relaxed">
+                “{testimonials[currentTestimonial].quote}”
+              </p>
+
+              <div className="mt-8 flex flex-col items-center">
+                <motion.img
+                  key={testimonials[currentTestimonial].avatar}
+                  src={testimonials[currentTestimonial].avatar}
+                  alt={testimonials[currentTestimonial].name}
+                  className="w-20 h-20 rounded-full border-4 border-indigo-500 shadow-lg"
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
+                />
+                <div className="mt-4">
+                  <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
+                    {testimonials[currentTestimonial].name}
+                  </h4>
+                  <span className="text-sm text-gray-500 dark:text-gray-400">
+                    {testimonials[currentTestimonial].title}
+                  </span>
+                </div>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Navigation Dots */}
+          <div className="mt-8 flex justify-center gap-3">
+            {testimonials.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentTestimonial(idx)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  currentTestimonial === idx
+                    ? "bg-indigo-600 scale-125"
+                    : "bg-gray-400 hover:bg-indigo-400"
+                }`}
+              ></button>
+            ))}
           </div>
-          <div className="mt-6">
-            <ul className="flex gap-x-3 justify-center">
-              {testimonials.map((item, idx) => (
-                <li key={idx}>
-                  <button
-                    className={`w-2.5 h-2.5 rounded-full duration-150 ring-offset-2 ring-indigo-600 focus:ring ${
-                      currentTestimonial === idx
-                        ? "bg-indigo-600"
-                        : "bg-gray-300"
-                    }`}
-                    onClick={() => setCurrentTestimonial(idx)}
-                  ></button>
-                </li>
-              ))}
-            </ul>
+
+          {/* Arrows (optional for next/prev) */}
+          <div className="absolute top-1/2 -translate-y-1/2 w-full flex justify-between px-2">
+            <button
+              onClick={handlePrev}
+              className="p-2 bg-white dark:bg-gray-800 rounded-full shadow-md hover:scale-110 transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="w-5 h-5 text-gray-800 dark:text-gray-200"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+            <button
+              onClick={handleNext}
+              className="p-2 bg-white dark:bg-gray-800 rounded-full shadow-md hover:scale-110 transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="w-5 h-5 text-gray-800 dark:text-gray-200"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </motion.section>
   );
 };
+
 export default Testimonials;

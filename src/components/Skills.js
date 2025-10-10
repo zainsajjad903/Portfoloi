@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { FaHtml5, FaCss3Alt, FaDatabase, FaWordpress } from "react-icons/fa";
 import { SiPostman, SiJavascript } from "react-icons/si";
 
@@ -6,24 +7,22 @@ const About = () => {
   const features = [
     {
       icon: <FaHtml5 className="w-6 h-6" />,
-
       title: "HTML & CSS",
-      desc: "Strong foundation in building responsive and structured web pages using HTML5 and modern CSS3",
+      desc: "Strong foundation in building responsive and structured web pages using HTML5 and modern CSS3.",
     },
     {
       icon: <SiJavascript className="w-6 h-6" />,
-      title: "JS & React",
+      title: "JavaScript & React",
       desc: "Hands-on experience with JavaScript fundamentals and creating interactive UIs with React.",
     },
     {
-      icon2: <FaCss3Alt className="w-6 h-6" />,
+      icon: <FaCss3Alt className="w-6 h-6" />,
       title: "Tailwind CSS & Bootstrap",
       desc: "Capable of designing clean, responsive, and modern layouts using popular CSS frameworks.",
     },
     {
       icon: <FaDatabase className="w-6 h-6" />,
-
-      title: "SQL & MongoDB & Firebase",
+      title: "SQL, MongoDB & Firebase",
       desc: "Basic understanding of database design, queries, and working with cloud-based databases.",
     },
     {
@@ -33,40 +32,66 @@ const About = () => {
     },
     {
       icon: <FaWordpress className="w-6 h-6" />,
-
-      title: "Wordpress& Shopify",
+      title: "WordPress & Shopify",
       desc: "Ability to build and customize simple websites and e-commerce stores with WordPress and Shopify.",
     },
   ];
 
   return (
-    <section className="py-14" data-aos="fade-up">
-      <div className="max-w-screen-xl mx-auto px-4 text-center md:px-8">
-        <div className="max-w-2xl mx-auto">
-          <h3 className=" text-3xl font-semibold sm:text-4xl">
+    <motion.section
+      id="skills-section"
+      className="py-24 text-center bg-gradient-to-b from-white to-indigo-50 dark:from-gray-900 dark:to-gray-800"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+    >
+      <div className="max-w-screen-xl mx-auto px-4 md:px-8">
+        {/* Heading */}
+        <motion.div
+          className="max-w-2xl mx-auto mb-12"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h3 className="text-3xl font-bold sm:text-4xl text-gray-900 dark:text-white">
             What I Do Best
           </h3>
-          <p className="mt-3">
-            As a fresher, I have been building my skills in modern web
-            development technologies and continuously learning to improve. Here
-            are some of the key areas I am confident in.
+          <p className="mt-3 text-gray-600 dark:text-gray-400">
+            As a fresher, I’ve been sharpening my skills in modern web
+            technologies and continuously learning to improve. Here are the key
+            areas I’m confident in:
           </p>
-        </div>
-        <div className="mt-12">
-          <ul className="grid gap-y-8 gap-x-12 sm:grid-cols-2 lg:grid-cols-3">
-            {features.map((item, idx) => (
-              <li key={idx} className="space-y-3">
-                <div className="w-14 h-14 mx-auto bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center gap-1">
-                  {item.icon} {item.icon2}
-                </div>
-                <h4 className="text-lg font-semibold">{item.title}</h4>
-                <p>{item.desc}</p>
-              </li>
-            ))}
-          </ul>
+        </motion.div>
+
+        {/* Skills Grid */}
+        <div className="grid gap-y-10 gap-x-12 sm:grid-cols-2 lg:grid-cols-3">
+          {features.map((item, idx) => (
+            <motion.div
+              key={idx}
+              className="group space-y-3 bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl p-8 transition-all duration-300 border border-gray-100 dark:border-gray-700"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: idx * 0.15, duration: 0.8 }}
+              whileHover={{
+                scale: 1.05,
+                y: -5,
+                boxShadow: "0px 10px 25px rgba(79,70,229,0.3)",
+              }}
+            >
+              <div className="w-14 h-14 mx-auto bg-indigo-50 dark:bg-gray-700 text-indigo-600 rounded-full flex items-center justify-center">
+                {item.icon}
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mt-3">
+                {item.title}
+              </h4>
+              <p className="text-gray-600 dark:text-gray-400">{item.desc}</p>
+            </motion.div>
+          ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
+
 export default About;
