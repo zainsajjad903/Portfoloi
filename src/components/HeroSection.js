@@ -45,7 +45,7 @@ const HeroSection = () => {
             transition={{ duration: 1 }}
           >
             <Typewriter
-              words={["Mern Stack Developer"]}
+              words={["Full Stack Developer"]}
               loop={false}
               cursor
               cursorStyle="_"
