@@ -38,8 +38,8 @@ const Aboutme = () => {
               <span className="font-semibold text-indigo-600 dark:text-indigo-400">
                 Muhammad Zain
               </span>{" "}
-              — a Frontend Developer based in Lahore, Pakistan. I specialize in
-              building modern, responsive, and user-friendly web applications
+              — a Full Stack Developer based in Lahore, Pakistan. I specialize
+              in building modern, responsive, and user-friendly web applications
               using <span className="font-medium">React</span> and{" "}
               <span className="font-medium">TailwindCSS</span>.
             </p>
