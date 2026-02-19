@@ -50,7 +50,7 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
-            {/* 🌗 Theme Toggle - Desktop Only */}
+            {/* Theme Toggle - Desktop Only */}
             <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               className="hidden md:flex p-3 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-yellow-300 transition-all hover:scale-110 hover:shadow-md"
