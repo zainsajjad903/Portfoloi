@@ -62,7 +62,7 @@ const Navbar = () => {
         </nav>
       </header>
 
-      {/* 📱 Mobile Top-Right Theme Toggle */}
+      {/*  Mobile Top-Right Theme Toggle */}
       <button
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         className={`md:hidden fixed top-4 right-4 z-50 p-3 rounded-full shadow-lg border transition-all hover:scale-110
