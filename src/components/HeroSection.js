@@ -12,7 +12,7 @@ const HeroSection = () => {
         className="max-w-screen-xl mx-auto px-4 py-20 md:flex md:items-center md:gap-12"
         data-aos="fade-up"
       >
-        {/* 📱 Mobile Image (Top) */}
+        {/*  Mobile Image (Top) */}
         <div className="flex justify-center mb-8 md:hidden">
           <img
             src="/image.png"
