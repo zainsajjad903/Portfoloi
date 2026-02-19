@@ -32,7 +32,7 @@ const Navbar = () => {
 
   return (
     <>
-      {/* 🖥️ Desktop Navbar */}
+      {/*  Desktop Navbar */}
       <header className="hidden md:block sticky top-4 z-50">
         <nav className="flex items-center justify-between bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg rounded-full px-6 py-3 mx-auto max-w-6xl border border-gray-200 dark:border-gray-700">
           <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
