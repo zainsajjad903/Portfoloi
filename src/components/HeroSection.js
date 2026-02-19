@@ -85,7 +85,7 @@ const HeroSection = () => {
             </motion.a>
           </div>
 
-          {/* 🌐 Social Icons */}
+          {/*  Social Icons */}
           <div className="mt-6 flex justify-center md:justify-start space-x-4">
             {[
               {
