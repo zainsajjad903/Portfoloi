@@ -30,7 +30,7 @@ const HeroSection = () => {
           />
         </div>
 
-        {/* 📝 Text Section */}
+        {/*  Text Section */}
         <motion.div
           className="flex-1 text-center md:text-left"
           initial={{ opacity: 0, y: 40 }}
