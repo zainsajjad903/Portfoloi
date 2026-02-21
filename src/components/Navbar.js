@@ -77,7 +77,7 @@ const Navbar = () => {
         {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
       </button>
 
-      {/* 📱 Mobile Bottom Navigation */}
+      {/*  Mobile Bottom Navigation */}
       <nav
         className="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 flex justify-between items-center 
 bg-white/10 dark:bg-gray-900/60 backdrop-blur-xl 
