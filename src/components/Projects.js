@@ -31,10 +31,10 @@ const projects = [
 const ProjectsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsPerPage, setItemsPerPage] = useState(
-    window.innerWidth < 768 ? 1 : 3
+    window.innerWidth < 768 ? 1 : 3,
   );
 
-  // 🔁 Adjust layout on resize
+  // Adjust layout on resize
   useEffect(() => {
     const handleResize = () => {
       setItemsPerPage(window.innerWidth < 768 ? 1 : 3);
@@ -45,13 +45,13 @@ const ProjectsSection = () => {
 
   const prevSlide = () => {
     setCurrentIndex((prev) =>
-      prev === 0 ? projects.length - itemsPerPage : prev - itemsPerPage
+      prev === 0 ? projects.length - itemsPerPage : prev - itemsPerPage,
     );
   };
 
   const nextSlide = () => {
     setCurrentIndex((prev) =>
-      prev + itemsPerPage >= projects.length ? 0 : prev + itemsPerPage
+      prev + itemsPerPage >= projects.length ? 0 : prev + itemsPerPage,
     );
   };
 
