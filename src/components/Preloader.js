@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Preloader = () => {
   const [displayedText, setDisplayedText] = useState("");
   const fullText = "Welcome to Zain Portfolio ";
-  const charDelay = 100; // ms per char
+  const charDelay = 100;
 
   useEffect(() => {
     // use deterministic setTimeouts instead of a single setInterval
@@ -13,14 +13,17 @@ const Preloader = () => {
       timers.push(
         setTimeout(() => {
           setDisplayedText((prev) => prev + fullText.charAt(i));
-        }, i * charDelay)
+        }, i * charDelay),
       );
     }
 
     // ensure we show full text if something interrupts (safety)
-    const ensureFullTextTimer = setTimeout(() => {
-      setDisplayedText(fullText);
-    }, fullText.length * charDelay + 50);
+    const ensureFullTextTimer = setTimeout(
+      () => {
+        setDisplayedText(fullText);
+      },
+      fullText.length * charDelay + 50,
+    );
 
     return () => {
       timers.forEach(clearTimeout);
