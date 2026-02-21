@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { FaHtml5, FaCss3Alt, FaDatabase, FaWordpress } from "react-icons/fa";
 import { SiPostman, SiJavascript } from "react-icons/si";
