@@ -3,12 +3,12 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const projects = [
   {
-    title: "Expense Tracker App",
+    title: "Client Management System",
     description:
       "Smart browser extension to clip and save web content instantly.",
     image: "/image3.png",
     tags: ["React", "Firebase", "TailwindCSS", "Node.js"],
-    link: "https://github.com/your-username/ai-clipper",
+    link: "https://clientmaagement.vercel.app/",
   },
   {
     title: "Chrome Extension (AI Clipper)",
