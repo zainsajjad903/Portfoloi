@@ -20,7 +20,8 @@ const projects = [
   },
   {
     title: "Expensor - Expense Tracker",
-    description: "",
+    description:
+      "keep track of your daily expenses with real-time Firebase storage and analytics.",
     image: "/image4.png",
     tags: ["React", "MongoDB", "Bootstrap", "Node.js", "Express"],
     link: "https://personalapp-rho.vercel.app/",
