@@ -23,7 +23,7 @@ const projects = [
     description:
       "keep track of your daily expenses with real-time Firebase storage and analytics.",
     image: "/image4.png",
-    tags: ["React", "MongoDB", "Bootstrap", "Node.js", "Express"],
+    tags: ["React", "TailwindCSS", "Firebase"],
     link: "https://personalapp-rho.vercel.app/",
   },
 ];
