@@ -19,12 +19,11 @@ const projects = [
     link: "https://github.com/your-username/ai-clipper",
   },
   {
-    title: "INoteBook",
-    description:
-      "Secure cloud-based app to create, edit, and manage personal notes.",
+    title: "Expensor - Expense Tracker",
+    description: "",
     image: "/image4.png",
     tags: ["React", "MongoDB", "Bootstrap", "Node.js", "Express"],
-    link: "https://github.com/your-username/ai-clipper",
+    link: "https://personalapp-rho.vercel.app/",
   },
 ];
 
