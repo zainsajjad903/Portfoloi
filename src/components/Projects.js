@@ -5,7 +5,7 @@ const projects = [
   {
     title: "Client Management System",
     description:
-      "Smart browser extension to clip and save web content instantly.",
+      "Smart client management system built with React and Firebase.",
     image: "/image3.png",
     tags: ["React", "Firebase", "TailwindCSS", "Node.js"],
     link: "https://clientmaagement.vercel.app/",
