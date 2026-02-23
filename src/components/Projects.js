@@ -34,7 +34,6 @@ const ProjectsSection = () => {
     window.innerWidth < 768 ? 1 : 3,
   );
 
-  // Adjust layout on resize
   useEffect(() => {
     const handleResize = () => {
       setItemsPerPage(window.innerWidth < 768 ? 1 : 3);
