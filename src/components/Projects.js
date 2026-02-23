@@ -7,7 +7,7 @@ const projects = [
     description:
       "Smart client management system built with React and Firebase.",
     image: "/image3.png",
-    tags: ["React", "Firebase", "TailwindCSS", "Node.js"],
+    tags: ["React", "Firebase", "TailwindCSS"],
     link: "https://clientmaagement.vercel.app/",
   },
   {
