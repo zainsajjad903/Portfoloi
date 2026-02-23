@@ -29,7 +29,7 @@ const Preloader = () => {
       timers.forEach(clearTimeout);
       clearTimeout(ensureFullTextTimer);
     };
-  }, []); // run once
+  }, []);
 
   // compute fade delay so fade only starts after typing finishes
   const typingDurationSec = (fullText.length * charDelay) / 1000;
