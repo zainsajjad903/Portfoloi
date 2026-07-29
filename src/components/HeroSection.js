@@ -9,7 +9,7 @@ const HeroSection = () => {
       className="bg-gradient-to-b from-white to-indigo-50 dark:from-gray-900 dark:to-gray-800"
     >
       <div
-        className="max-w-screen-xl mx-auto px-4 py-20 md:flex md:items-center md:gap-12"
+        className="max-w-screen-xl mx-auto px-4 pt-28 pb-16 md:pt-36 md:pb-24 md:flex md:items-center md:gap-12"
         data-aos="fade-up"
       >
         {/*  Mobile Image (Top) */}
