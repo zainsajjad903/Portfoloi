@@ -111,26 +111,21 @@ const Navbar = () => {
           <a
             href="#hero-section"
             onClick={(e) => handleNavClick(e, "#hero-section", "hero-section")}
-            className="flex items-center gap-3 group"
+            className="flex items-center gap-3 group min-w-0"
           >
-            <div className="relative flex items-center justify-center w-10 h-10 rounded-full overflow-hidden border-2 border-white/80 dark:border-gray-900/80 bg-white/90 shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform duration-300">
+            <div className="relative flex items-center justify-center w-10 h-10 rounded-full overflow-hidden border-2 border-white/80 dark:border-gray-900/80 bg-white/90 shadow-sm group-hover:scale-105 transition-transform duration-300 flex-shrink-0">
               <img
                 src={`${process.env.PUBLIC_URL}/favicon.ico`}
                 alt="Muhammad Zain logo"
                 className="w-full h-full object-cover"
               />
-              <span className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-emerald-500 border-2 border-white dark:border-gray-900 rounded-full"></span>
             </div>
-            <div className="flex flex-col">
-              <span className="text-lg font-extrabold tracking-tight bg-gradient-to-r from-gray-900 via-gray-800 to-indigo-900 dark:from-white dark:via-gray-100 dark:to-indigo-300 bg-clip-text text-transparent group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+            <div className="flex flex-col min-w-0">
+              <span className="text-[15px] font-semibold tracking-[0.18em] uppercase text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                 Muhammad Zain
               </span>
-              <span className="flex items-center gap-1.5 text-[10px] font-medium text-emerald-600 dark:text-emerald-400">
-                <span className="relative flex h-1.5 w-1.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
-                </span>
-                Available for work
+              <span className="text-[10px] font-medium tracking-[0.28em] uppercase text-gray-500 dark:text-gray-400">
+                Software Engineer
               </span>
             </div>
           </a>
@@ -206,26 +201,25 @@ const Navbar = () => {
       </header>
 
       {/* Mobile Top Navbar Header */}
-      <div className="md:hidden fixed top-0 left-0 right-0 z-50 p-4 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-800/50 flex items-center justify-between shadow-sm">
+      <div className="md:hidden fixed top-0 left-0 right-0 z-50 py-2 px-3 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-800/50 flex items-center justify-between shadow-sm">
         <a
           href="#hero-section"
           onClick={(e) => handleNavClick(e, "#hero-section", "hero-section")}
-          className="flex items-center gap-2.5"
+          className="flex items-center gap-2.5 min-w-0"
         >
-          <div className="flex items-center justify-center w-9 h-9 rounded-full overflow-hidden border-2 border-white/80 dark:border-gray-900/80 bg-white/90 shadow-sm">
+          <div className="flex items-center justify-center w-9 h-9 rounded-full overflow-hidden border-2 border-white/80 dark:border-gray-900/80 bg-white/90 shadow-sm flex-shrink-0">
             <img
               src={`${process.env.PUBLIC_URL}/favicon.ico`}
               alt="Muhammad Zain logo"
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="flex flex-col">
-            <span className="text-base font-extrabold tracking-tight text-gray-900 dark:text-white">
+          <div className="flex flex-col min-w-0">
+            <span className="text-[13px] font-semibold tracking-[0.16em] uppercase text-gray-900 dark:text-white">
               Muhammad Zain
             </span>
-            <span className="flex items-center gap-1 text-[9px] font-medium text-emerald-600 dark:text-emerald-400">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-              Available for work
+            <span className="text-[8px] font-medium tracking-[0.24em] uppercase text-gray-500 dark:text-gray-400">
+              Software Engineer
             </span>
           </div>
         </a>
@@ -241,7 +235,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Bottom Navigation Bar */}
-      <nav className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 flex items-center justify-around bg-white/85 dark:bg-gray-900/85 backdrop-blur-xl shadow-2xl shadow-indigo-500/20 rounded-full px-4 py-2.5 w-[92%] max-w-md border border-gray-200/80 dark:border-gray-700/80 md:hidden">
+      <nav className="fixed bottom-3 left-1/2 -translate-x-1/2 z-50 flex items-center justify-around bg-white/85 dark:bg-gray-900/85 backdrop-blur-xl shadow-2xl shadow-indigo-500/20 rounded-full px-3 py-2 w-[92%] max-w-md border border-gray-200/80 dark:border-gray-700/80 md:hidden">
         {navigation.map((item) => {
           const isActive = activeSection === item.id;
           return (

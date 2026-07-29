@@ -3,10 +3,10 @@ import { FaFacebookF, FaLinkedinIn, FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="relative bg-gradient-to-t from-gray-900 via-gray-800 to-gray-900 text-gray-300 py-8 mt-16 border-t border-gray-700 shadow-[0_-4px_20px_rgba(79,70,229,0.15)]">
+    <footer className="relative bg-gradient-to-t from-gray-900 via-gray-800 to-gray-900 text-gray-300 py-8 mt-5s border-t border-gray-700 shadow-[0_-4px_20px_rgba(79,70,229,0.15)]">
       <div className="max-w-screen-xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Left: Text */}
-        <p className="text-center md:text-left text-sm md:text-base text-gray-400 tracking-wide">
+        <p className="text-center md:text-left text-sm md:text-base text-gray-400 tracking-[0.12em] uppercase">
           © {new Date().getFullYear()}{" "}
           <span className="font-semibold text-white">Muhammad Zain</span>. All
           rights reserved.

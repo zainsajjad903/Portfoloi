@@ -53,7 +53,7 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h3 className="text-3xl font-bold sm:text-4xl text-gray-900 dark:text-white">
+          <h3 className="text-3xl sm:text-4xl font-semibold tracking-[0.16em] uppercase text-gray-900 dark:text-white">
             What I Do Best
           </h3>
           <p className="mt-3 text-gray-600 dark:text-gray-400">

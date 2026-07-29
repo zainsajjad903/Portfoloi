@@ -30,13 +30,13 @@ const Testimonials = () => {
 
   const handleNext = () => {
     setCurrentTestimonial((prev) =>
-      prev === testimonials.length - 1 ? 0 : prev + 1
+      prev === testimonials.length - 1 ? 0 : prev + 1,
     );
   };
 
   const handlePrev = () => {
     setCurrentTestimonial((prev) =>
-      prev === 0 ? testimonials.length - 1 : prev - 1
+      prev === 0 ? testimonials.length - 1 : prev - 1,
     );
   };
 
@@ -50,11 +50,11 @@ const Testimonials = () => {
       viewport={{ once: true }}
     >
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-10">
+        <h2 className="text-3xl md:text-4xl font-semibold tracking-[0.16em] uppercase text-gray-900 dark:text-white mb-10">
           Testimonials
         </h2>
 
-        <div className="relative max-w-3xl mx-auto">
+        <div className="relative max-w-4xl mx-auto">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentTestimonial}
@@ -62,10 +62,15 @@ const Testimonials = () => {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -30, scale: 0.95 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md p-10 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700"
+              className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-xl p-8 md:p-10 rounded-3xl shadow-[0_20px_60px_-20px_rgba(79,70,229,0.35)] border border-gray-200/80 dark:border-gray-700/80"
             >
-              <p className="text-lg italic text-gray-700 dark:text-gray-300 leading-relaxed">
-                “{testimonials[currentTestimonial].quote}”
+              <div className="flex items-center justify-center mb-6">
+                <div className="w-14 h-14 rounded-full bg-indigo-100 dark:bg-indigo-900/40 flex items-center justify-center text-indigo-600 dark:text-indigo-300 text-2xl font-semibold">
+                  “
+                </div>
+              </div>
+              <p className="text-lg text-gray-700 dark:text-gray-300 leading-8">
+                {testimonials[currentTestimonial].quote}
               </p>
 
               <div className="mt-8 flex flex-col items-center">
@@ -78,7 +83,7 @@ const Testimonials = () => {
                   animate={{ scale: 1 }}
                   transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
                 />
-                <div className="mt-4">
+                <div className="mt-4 text-center">
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
                     {testimonials[currentTestimonial].name}
                   </h4>
@@ -90,7 +95,6 @@ const Testimonials = () => {
             </motion.div>
           </AnimatePresence>
 
-          {/* Navigation Dots */}
           <div className="mt-8 flex justify-center gap-3">
             {testimonials.map((_, idx) => (
               <button
@@ -105,7 +109,6 @@ const Testimonials = () => {
             ))}
           </div>
 
-          {/* Arrows (optional for next/prev) */}
           <div className="absolute top-1/2 -translate-y-1/2 w-full flex justify-between px-2">
             <button
               onClick={handlePrev}

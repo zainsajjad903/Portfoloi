@@ -32,9 +32,11 @@ const ContactItem = ({ icon, title, content }) => (
     transition={{ duration: 0.8 }}
     viewport={{ once: true }}
   >
-    <div className="flex items-center gap-3 text-xl font-bold">
+    <div className="flex items-center gap-3">
       <img src={icon} alt="" className="w-10 h-10" />
-      <h3>{title}</h3>
+      <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+        {title}
+      </h3>
     </div>
     <p className="mt-2 text-gray-600 dark:text-gray-400">{content}</p>
   </motion.div>
@@ -68,7 +70,7 @@ const ContactUsForm = () => {
           subject: formData.subject,
           message: formData.message,
         },
-        "Irl-_wThBtuMqX4dE"
+        "Irl-_wThBtuMqX4dE",
       )
       .then(
         () => {
@@ -83,7 +85,7 @@ const ContactUsForm = () => {
         },
         () => {
           toast.error("Failed to send message. Please try again later.");
-        }
+        },
       );
   };
 
@@ -108,7 +110,7 @@ const ContactUsForm = () => {
   return (
     <motion.section
       id="contact-section"
-      className="py-24 bg-gradient-to-b from-white to-indigo-50 dark:from-gray-900 dark:to-gray-800 text-center"
+      className="py-20 bg-gradient-to-b from-white to-indigo-50 dark:from-gray-900 dark:to-gray-800 text-center"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
@@ -122,7 +124,7 @@ const ContactUsForm = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
+          <h1 className="text-3xl md:text-4xl font-semibold tracking-[0.16em] uppercase text-gray-900 dark:text-white">
             Contact Me
           </h1>
           <p className="mt-6 text-lg md:text-xl max-w-2xl mx-auto text-gray-600 dark:text-gray-400">

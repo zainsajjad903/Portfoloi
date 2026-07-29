@@ -62,7 +62,7 @@ const ProjectsSection = () => {
     >
       <div className="max-w-screen-xl mx-auto px-4">
         {/* Heading */}
-        <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-white">
+        <h2 className="text-3xl md:text-4xl font-semibold tracking-[0.16em] uppercase text-center text-gray-900 dark:text-white">
           My Works
         </h2>
         <p className="text-center mt-4 max-w-2xl mx-auto text-gray-700 dark:text-gray-300">
@@ -95,7 +95,7 @@ const ProjectsSection = () => {
 
                   {/* Project Content */}
                   <div className="p-5">
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-indigo-600 transition">
+                    <h3 className="text-lg font-semibold tracking-[0.02em] text-gray-900 dark:text-white group-hover:text-indigo-600 transition">
                       {project.title}
                     </h3>
                     <p className="text-sm text-gray-600 dark:text-gray-300 mt-2 leading-relaxed">

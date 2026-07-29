@@ -9,7 +9,7 @@ const HeroSection = () => {
       className="bg-gradient-to-b from-white to-indigo-50 dark:from-gray-900 dark:to-gray-800"
     >
       <div
-        className="max-w-screen-xl mx-auto px-4 pt-28 pb-16 md:pt-36 md:pb-24 md:flex md:items-center md:gap-12"
+        className="max-w-screen-xl mx-auto px-4 pt-20 pb-12 md:pt-36 md:pb-24 md:flex md:items-center md:gap-12"
         data-aos="fade-up"
       >
         {/*  Mobile Image (Top) */}
@@ -39,13 +39,13 @@ const HeroSection = () => {
         >
           {/* Title Animation */}
           <motion.h1
-            className="text-2xl md:text-4xl font-bold whitespace-nowrap text-gray-900 dark:text-white"
+            className="text-2xl md:text-4xl font-semibold tracking-[0.12em] uppercase text-gray-900 dark:text-white"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
           >
             <Typewriter
-              words={["Full Stack Developer"]}
+              words={["Software Engineer"]}
               loop={false}
               cursor
               cursorStyle="_"
@@ -55,9 +55,10 @@ const HeroSection = () => {
           </motion.h1>
 
           {/* Subtitle */}
-          <p className="mt-4 max-w-lg mx-auto md:mx-0 text-gray-700 dark:text-gray-300 leading-relaxed">
-            Showcasing my expertise in modern web development, creating fast,
-            responsive and user-friendly websites that drive results.
+          <p className="mt-4 max-w-xl mx-auto md:mx-0 text-gray-700 dark:text-gray-300 leading-8 text-base md:text-lg">
+            Transforming ideas into high-performance web applications with a
+            strong focus on scalable architecture, clean code, and seamless user
+            experiences across the MERN stack.
           </p>
 
           {/* Button */}

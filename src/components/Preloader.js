@@ -52,7 +52,7 @@ const Preloader = () => {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.1, duration: 0.6 }}
-          className="text-4xl md:text-7xl font-bold tracking-wide font-['Poppins'] text-white"
+          className="text-4xl md:text-7xl font-semibold tracking-[0.2em] uppercase text-white"
         >
           {displayedText}
           <span
@@ -67,7 +67,7 @@ const Preloader = () => {
           />
         </motion.h1>
 
-        <p className="text-gray-400 mt-6 text-base md:text-xl font-light tracking-wide">
+        <p className="text-gray-400 mt-6 text-base md:text-xl font-medium tracking-[0.16em] uppercase">
           Loading your experience...
         </p>
       </motion.div>
