@@ -29,7 +29,7 @@ const Aboutme = () => {
 
         {/* Heading */}
         <motion.h2
-          className="text-3xl md:text-4xl font-bold tracking-tight mb-8 text-gray-900 dark:text-white"
+          className="relative text-3xl md:text-4xl font-semibold tracking-[0.16em] uppercase mb-8 text-gray-900 dark:text-white after:mx-auto after:mt-4 after:block after:h-1 after:w-20 after:rounded-full after:bg-gradient-to-r after:from-indigo-500 after:to-purple-500"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -43,7 +43,7 @@ const Aboutme = () => {
 
         {/* Paragraphs */}
         <motion.div
-          className="space-y-5 text-gray-700 dark:text-gray-300 leading-8 text-base md:text-lg text-left sm:text-center bg-white/60 dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-gray-100 dark:border-gray-700 shadow-sm"
+          className="space-y-5 text-gray-700 dark:text-gray-300 leading-8 text-base md:text-lg text-center bg-white/60 dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-gray-100 dark:border-gray-700 shadow-sm"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 1.2 }}

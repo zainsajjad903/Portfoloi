@@ -100,7 +100,7 @@ const ProjectsSection = () => {
           <span className="inline-block text-xs font-semibold tracking-[0.2em] uppercase text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/40 px-4 py-1.5 rounded-full mb-5">
             Featured Work
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <h2 className="relative text-3xl md:text-4xl font-semibold tracking-[0.16em] uppercase text-gray-900 dark:text-white after:mx-auto after:mt-4 after:block after:h-1 after:w-20 after:rounded-full after:bg-gradient-to-r after:from-indigo-500 after:to-purple-500">
             My{" "}
             <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
               Works

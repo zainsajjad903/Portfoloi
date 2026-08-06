@@ -50,7 +50,7 @@ const Testimonials = () => {
       viewport={{ once: true }}
     >
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
-        <h2 className="text-3xl md:text-4xl font-semibold tracking-[0.16em] uppercase text-gray-900 dark:text-white mb-10">
+        <h2 className="relative text-3xl md:text-4xl font-semibold tracking-[0.16em] uppercase text-gray-900 dark:text-white mb-10 after:mx-auto after:mt-4 after:block after:h-1 after:w-20 after:rounded-full after:bg-gradient-to-r after:from-indigo-500 after:to-purple-500">
           Testimonials
         </h2>
 

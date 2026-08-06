@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { FaWhatsapp } from "react-icons/fa";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import Progress from "./components/Progress";
@@ -11,7 +12,9 @@ import Preloader from "./components/Preloader";
 import Aboutme from "./components/Aboutme";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
 AOS.init();
+
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -49,6 +52,18 @@ function App() {
           <ContactSection />
         </section>
         <Footer />
+
+        {/* Floating WhatsApp Button */}
+        <a
+          href="https://wa.me/923076048509?text=Hello%20Muhammad%20Zain,%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect."
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Contact Muhammad Zain on WhatsApp"
+          className="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-50 flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500 text-white shadow-xl transition-all duration-300 hover:bg-emerald-600 hover:scale-110 active:scale-95"
+          title="Chat on WhatsApp"
+        >
+          <FaWhatsapp className="h-6 w-6" />
+        </a>
       </div>
     </>
   );
