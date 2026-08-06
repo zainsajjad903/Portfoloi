@@ -39,52 +39,66 @@ const About = () => {
   return (
     <motion.section
       id="skills-section"
-      className="py-24 text-center bg-gradient-to-b from-white to-indigo-50 dark:from-gray-900 dark:to-gray-800"
+      className="relative py-24 text-center bg-gradient-to-b from-white to-indigo-50 dark:from-gray-900 dark:to-gray-800 overflow-hidden"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
       viewport={{ once: true }}
     >
-      <div className="max-w-screen-xl mx-auto px-4 md:px-8">
+      {/* Decorative background glow */}
+      <div className="pointer-events-none absolute -top-24 -left-24 w-72 h-72 bg-indigo-300/30 dark:bg-indigo-600/20 rounded-full blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-24 -right-24 w-72 h-72 bg-indigo-300/30 dark:bg-indigo-600/20 rounded-full blur-3xl" />
+
+      <div className="relative max-w-screen-xl mx-auto px-4 md:px-8">
         {/* Heading */}
         <motion.div
-          className="max-w-2xl mx-auto mb-12"
+          className="max-w-2xl mx-auto mb-14"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h3 className="text-3xl sm:text-4xl font-semibold tracking-[0.16em] uppercase text-gray-900 dark:text-white">
+          <span className="inline-block text-xs font-semibold tracking-[0.2em] uppercase text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/40 px-4 py-1.5 rounded-full mb-4">
+            Skills & Expertise
+          </span>
+          <h3 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
             What I Do Best
           </h3>
-          <p className="mt-3 text-gray-600 dark:text-gray-400">
-            As a fresher, I’ve been sharpening my skills in modern web
+          <p className="mt-3 text-gray-600 dark:text-gray-400 text-sm sm:text-base">
+            As a fresher, I've been sharpening my skills in modern web
             technologies and continuously learning to improve. Here are the key
-            areas I’m confident in:
+            areas I'm confident in:
           </p>
         </motion.div>
 
         {/* Skills Grid */}
-        <div className="grid gap-y-10 gap-x-12 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((item, idx) => (
             <motion.div
               key={idx}
-              className="group space-y-3 bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl p-8 transition-all duration-300 border border-gray-100 dark:border-gray-700"
+              className="group relative text-left space-y-3 bg-white dark:bg-gray-800 rounded-2xl shadow-sm hover:shadow-xl p-7 sm:p-8 transition-all duration-300 border border-gray-100 dark:border-gray-700 overflow-hidden"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: idx * 0.15, duration: 0.8 }}
+              transition={{ delay: idx * 0.12, duration: 0.7 }}
+              viewport={{ once: true }}
               whileHover={{
-                scale: 1.05,
-                y: -5,
-                boxShadow: "0px 10px 25px rgba(79,70,229,0.3)",
+                scale: 1.03,
+                y: -6,
+                boxShadow: "0px 12px 28px rgba(79,70,229,0.25)",
               }}
             >
-              <div className="w-14 h-14 mx-auto bg-indigo-50 dark:bg-gray-700 text-indigo-600 rounded-full flex items-center justify-center">
+              {/* subtle gradient accent on hover */}
+              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300" />
+
+              <div className="w-14 h-14 bg-indigo-50 dark:bg-gray-700 text-indigo-600 dark:text-indigo-400 rounded-xl flex items-center justify-center transition-colors duration-300 group-hover:bg-indigo-600 group-hover:text-white">
                 {item.icon}
               </div>
-              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mt-3">
+
+              <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
                 {item.title}
               </h4>
-              <p className="text-gray-600 dark:text-gray-400">{item.desc}</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                {item.desc}
+              </p>
             </motion.div>
           ))}
         </div>
