@@ -15,7 +15,6 @@ const Aboutme = () => {
       <div className="pointer-events-none absolute -bottom-24 right-1/4 w-80 h-80 bg-purple-300/25 dark:bg-purple-600/20 rounded-full blur-3xl" />
 
       <div className="relative max-w-4xl mx-auto px-6">
-        {/* Eyebrow badge */}
         <motion.span
           className="inline-block text-xs font-semibold tracking-[0.2em] uppercase text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/40 px-4 py-1.5 rounded-full mb-5"
           initial={{ opacity: 0, y: -10 }}
@@ -26,7 +25,6 @@ const Aboutme = () => {
           Get To Know Me
         </motion.span>
 
-        {/* Heading */}
         <motion.h2
           className="relative text-3xl md:text-4xl font-semibold tracking-[0.16em] uppercase mb-8 text-gray-900 dark:text-white after:mx-auto after:mt-4 after:block after:h-1 after:w-20 after:rounded-full after:bg-gradient-to-r after:from-indigo-500 after:to-purple-500"
           initial={{ opacity: 0, y: -20 }}
@@ -40,7 +38,6 @@ const Aboutme = () => {
           </span>
         </motion.h2>
 
-        {/* Paragraphs */}
         <motion.div
           className="space-y-5 text-gray-700 dark:text-gray-300 leading-8 text-base md:text-lg text-center bg-white/60 dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-gray-100 dark:border-gray-700 shadow-sm"
           initial={{ opacity: 0 }}
@@ -75,7 +72,6 @@ const Aboutme = () => {
           </p>
         </motion.div>
 
-        {/* Button Animation */}
         <motion.a
           href="https://wa.me/923076048509?text=Hi%20Muhammad%20Zain,%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project!"
           target="_blank"
