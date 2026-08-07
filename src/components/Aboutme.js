@@ -11,7 +11,6 @@ const Aboutme = () => {
       transition={{ duration: 1, ease: "easeOut" }}
       viewport={{ once: true }}
     >
-      {/* Decorative background glow */}
       <div className="pointer-events-none absolute -top-24 left-1/4 w-80 h-80 bg-indigo-300/25 dark:bg-indigo-600/20 rounded-full blur-3xl" />
       <div className="pointer-events-none absolute -bottom-24 right-1/4 w-80 h-80 bg-purple-300/25 dark:bg-purple-600/20 rounded-full blur-3xl" />
 
