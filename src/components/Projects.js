@@ -50,7 +50,6 @@ const ProjectsSection = () => {
   const [itemsPerPage, setItemsPerPage] = useState(3);
 
   useEffect(() => {
-    // safe on client only — avoids SSR "window is not defined" crash
     const handleResize = () => {
       setItemsPerPage(window.innerWidth < 768 ? 1 : 3);
     };
@@ -84,12 +83,10 @@ const ProjectsSection = () => {
       className="relative overflow-hidden py-24 bg-gradient-to-b from-indigo-50 to-white dark:from-gray-800 dark:to-gray-900"
       data-aos="fade-up"
     >
-      {/* Decorative background glow */}
       <div className="pointer-events-none absolute -top-24 -right-24 w-80 h-80 bg-indigo-300/25 dark:bg-indigo-600/20 rounded-full blur-3xl" />
       <div className="pointer-events-none absolute -bottom-24 -left-24 w-80 h-80 bg-purple-300/25 dark:bg-purple-600/20 rounded-full blur-3xl" />
 
       <div className="relative max-w-screen-xl mx-auto px-4">
-        {/* Heading */}
         <motion.div
           className="max-w-2xl mx-auto text-center"
           initial={{ opacity: 0, y: -20 }}
@@ -112,7 +109,6 @@ const ProjectsSection = () => {
           </p>
         </motion.div>
 
-        {/* Slider */}
         <div className="relative mt-14 px-2 sm:px-12">
           <AnimatePresence mode="wait">
             <motion.div
@@ -137,7 +133,6 @@ const ProjectsSection = () => {
                     whileHover={{ y: -6 }}
                     className="group w-full sm:w-[300px] bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-2xl hover:shadow-indigo-500/10 transition-shadow duration-300 border border-gray-200 dark:border-gray-700 overflow-hidden flex flex-col"
                   >
-                    {/* Project Image */}
                     <div className="relative w-full h-56 bg-gray-100 dark:bg-gray-900 overflow-hidden">
                       <img
                         src={project.image}
@@ -151,7 +146,6 @@ const ProjectsSection = () => {
                       </div>
                     </div>
 
-                    {/* Project Content */}
                     <div className="p-5 flex-1 flex flex-col justify-between">
                       <div>
                         <h3 className="text-lg font-semibold tracking-[0.02em] text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
@@ -162,7 +156,6 @@ const ProjectsSection = () => {
                         </p>
                       </div>
 
-                      {/* Tags */}
                       <div className="flex flex-wrap gap-2 mt-4">
                         {project.tags.map((tag) => (
                           <span
@@ -179,7 +172,6 @@ const ProjectsSection = () => {
             </motion.div>
           </AnimatePresence>
 
-          {/* Arrows */}
           <button
             onClick={prevSlide}
             aria-label="Previous projects"
@@ -196,7 +188,6 @@ const ProjectsSection = () => {
           </button>
         </div>
 
-        {/* Dots */}
         {totalPages > 1 && (
           <div className="flex justify-center gap-2 mt-10">
             {Array.from({ length: totalPages }).map((_, pageIdx) => (
