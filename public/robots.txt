@@ -1,3 +1,7 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+# Sitemap URLs
+Sitemap: https://www.muhammadzain.engineer/sitemap.xml
+Sitemap: https://muhammadzain.engineer/sitemap.xml

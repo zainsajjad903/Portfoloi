@@ -27,7 +27,7 @@ const HeroSection = () => {
             <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-500 blur-xl opacity-40 scale-105" />
             <img
               src="/image.png"
-              alt="Profile"
+              alt="Muhammad Zain - Full Stack MERN Developer and Software Engineer"
               className="relative w-44 h-44 object-cover object-top shadow-xl border-4 border-white dark:border-gray-800 ring-2 ring-indigo-500 rounded-full mx-auto"
             />
           </div>
@@ -44,7 +44,7 @@ const HeroSection = () => {
             <div className="absolute -inset-3 rounded-2xl bg-gradient-to-tr from-indigo-500 to-purple-500 blur-2xl opacity-20" />
             <img
               src="/image.png"
-              alt="Profile"
+              alt="Muhammad Zain - Full Stack MERN Developer in Lahore Pakistan"
               className="relative w-full h-auto object-cover shadow-xl border border-gray-200 dark:border-gray-700 rounded-2xl"
             />
           </div>
@@ -69,6 +69,7 @@ const HeroSection = () => {
 
           {/* Title Animation */}
           <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <span className="sr-only">Muhammad Zain - Full Stack MERN Developer &amp; Software Engineer</span>
             <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
               <Typewriter
                 words={["Software Engineer", "MERN Stack Developer"]}

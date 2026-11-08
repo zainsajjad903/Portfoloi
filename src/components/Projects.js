@@ -136,7 +136,7 @@ const ProjectsSection = () => {
                     <div className="relative w-full h-56 bg-gray-100 dark:bg-gray-900 overflow-hidden">
                       <img
                         src={project.image}
-                        alt={project.title}
+                        alt={`${project.title} - Muhammad Zain Portfolio Project`}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/70 via-indigo-900/0 to-indigo-900/0 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end justify-start p-4">
