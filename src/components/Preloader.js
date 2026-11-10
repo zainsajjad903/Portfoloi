@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Preloader = () => {
   const [displayedText, setDisplayedText] = useState("");
   const fullText = "Welcome to Zain Portfolio ";
-  const charDelay = 100;
+  const charDelay = 55;
 
   useEffect(() => {
     // use deterministic setTimeouts instead of a single setInterval
@@ -33,13 +33,13 @@ const Preloader = () => {
 
   // compute fade delay so fade only starts after typing finishes
   const typingDurationSec = (fullText.length * charDelay) / 1000;
-  const fadeDelay = typingDurationSec + 0.6; // small buffer
+  const fadeDelay = typingDurationSec + 0.3; // small buffer
 
   return (
     <motion.div
       initial={{ opacity: 1 }}
       animate={{ opacity: 0 }}
-      transition={{ duration: 1.2, delay: fadeDelay }}
+      transition={{ duration: 0.7, delay: fadeDelay }}
       className="fixed inset-0 flex items-center justify-center bg-black text-white z-50"
     >
       <motion.div

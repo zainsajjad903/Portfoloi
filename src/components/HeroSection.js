@@ -69,7 +69,7 @@ const HeroSection = () => {
 
           {/* Title Animation */}
           <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
-            <span className="sr-only">Muhammad Zain - Full Stack MERN Developer &amp; Software Engineer</span>
+            <span className="sr-only">Muhammad Zain - Full Stack MERN Developer and Software Engineer</span>
             <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
               <Typewriter
                 words={["Software Engineer", "MERN Stack Developer"]}

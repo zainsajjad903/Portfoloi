@@ -3,18 +3,18 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.muhammadzain.engineer/</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://www.muhammadzain.engineer/image.png</image:loc>
-      <image:title>Muhammad Zain - Full Stack MERN Developer</image:title>
-      <image:caption>Muhammad Zain - Software Engineer &amp; Full Stack Developer Portfolio</image:caption>
+      <image:title>Muhammad Zain - Software Engineer &amp; Full Stack MERN Developer</image:title>
+      <image:caption>Official Portfolio of Muhammad Zain — Software Engineer in Lahore, Pakistan</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://muhammadzain.engineer/</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
