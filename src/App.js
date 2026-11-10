@@ -47,7 +47,9 @@ function App() {
         <section id="progress-section" className="mt-25 mb-25">
           <Progress />
         </section>
-        <Testimonials className="mt-25" />
+        <section id="testimonials-section" className="mt-25">
+          <Testimonials />
+        </section>
         <section id="contact-section" className="mt-25 mb-25">
           <ContactSection />
         </section>
