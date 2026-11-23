@@ -4,6 +4,22 @@ import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 
 const projects = [
   {
+    title: "EasySMS — School ERP & LMS",
+    description:
+      "Integrated digital campus ERP & LMS platform featuring role-based portals (Student, Teacher, Admin), attendance, fee management, and academic grading.",
+    image: "/easysms-mockup.png",
+    tags: ["React", "Node.js", "Express", "MongoDB", "TailwindCSS"],
+    link: "https://easysms.tech",
+  },
+  {
+    title: "StockGrid — Cloud POS & ERP",
+    description:
+      "Modern point-of-sale and multi-godam inventory management ERP system with real-time billing, supplier ledgers, stock sync, and financial analytics.",
+    image: "/stockgrid-mockup.png",
+    tags: ["React", "Node.js", "MongoDB", "POS", "TailwindCSS"],
+    link: "https://www.stock-grid.app",
+  },
+  {
     title: "ITGlobBiz Solutions",
     description:
       "Enterprise tech services agency platform offering custom application design, AI integration, and digital growth solutions.",
@@ -20,25 +36,9 @@ const projects = [
     link: "https://www.taxauditpakistan.com/",
   },
   {
-    title: "Client Management System",
-    description:
-      "Smart client management system built with React and Firebase.",
-    image: "/screencapture-localhost-3000-2026-08-06-10_43_22.png",
-    tags: ["React", "Firebase", "TailwindCSS"],
-    link: "https://clientmaagement.vercel.app/",
-  },
-  {
-    title: "Chrome Extension (AI Clipper)",
-    description:
-      "Track your daily expenses with real-time Firebase storage and analytics.",
-    image: "/image2.png",
-    tags: ["React", "Firebase", "TailwindCSS", "Node.js"],
-    link: "https://github.com/zainsajjad903/ai-clipper",
-  },
-  {
     title: "Expensor - Expense Tracker",
     description:
-      "Keep track of your daily expenses with real-time Firebase storage and analytics.",
+      "Personal finance management application featuring real-time budget tracking, dynamic category distribution, and analytical breakdowns.",
     image: "/image4.png",
     tags: ["React", "TailwindCSS", "Firebase"],
     link: "https://personalapp-rho.vercel.app/",
