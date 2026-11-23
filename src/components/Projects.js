@@ -36,12 +36,12 @@ const projects = [
     link: "https://www.taxauditpakistan.com/",
   },
   {
-    title: "Expensor - Expense Tracker",
+    title: "NullStack Solutions",
     description:
-      "Personal finance management application featuring real-time budget tracking, dynamic category distribution, and analytical breakdowns.",
-    image: "/image4.png",
-    tags: ["React", "TailwindCSS", "Firebase"],
-    link: "https://personalapp-rho.vercel.app/",
+      "Enterprise software agency platform delivering Pakistan's leading cloud and offline Point of Sale (POS) and School Management ERP solutions.",
+    image: "/nullstack-mockup.png",
+    tags: ["React", "TailwindCSS", "Node.js", "Enterprise ERP"],
+    link: "https://www.nullstacksolutions.tech",
   },
 ];
 
